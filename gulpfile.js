@@ -18,9 +18,7 @@ const pkg = require('./package.json');
 
 // Set the banner content
 const banner = ['/*!\n',
-  ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-  ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-  ' * Licensed under <%= pkg.license %> (https://github.com/BlackrockDigital/<%= pkg.name %>/blob/master/LICENSE)\n',
+  ' * Django Templates - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
   ' */\n',
   '\n'
 ].join('');
@@ -73,7 +71,7 @@ function modules() {
 // CSS task
 function css() {
   return gulp
-    .src("./scss/**/*.scss")
+    .src("./theme/static/theme/scss/**/*.scss")
     .pipe(plumber())
     .pipe(sass({
       outputStyle: "expanded",
@@ -99,10 +97,10 @@ function css() {
 function js() {
   return gulp
     .src([
-      './js/*.js',
-      '!./js/*.min.js',
-      '!./js/contact_me.js',
-      '!./js/jqBootstrapValidation.js'
+      './theme/static/theme/js/*.js',
+      '!./theme/static/theme/js/*.min.js',
+      '!./theme/static/theme/js/contact_me.js',
+      '!./theme/static/theme/js/jqBootstrapValidation.js'
     ])
     .pipe(uglify())
     .pipe(header(banner, {
