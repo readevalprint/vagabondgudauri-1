@@ -22,6 +22,25 @@
     "title": "KNOWLEDGE ABOUT GUDAURI",
     "description": "There\u2019s still not too much information online about Gudauri in English, so we\u2019re happy to give our best recommendations to make your experience as enjoyable as possible."
   }],
+  "lessons": {
+
+    "head": "Ski Lessons & Prices",
+    "subhead": "Education and experiences are the best investments in life satisfaction",
+    "description": "Let’s make the most out of your ski or snowboard trip to Gudauri by taking your technique to the next level! Our range of private lesson and discounted package options can be booked individually or together with friends and family. Each lesson is individually tailored to the student(s); we ski at a pace suitable for you and take breaks when you want them. \n\nLocation: Our instructors will meet you wherever is most convenient within the area of Gudauri Ski Resort based on your ability level and the location of your accommodation. Group lessons meet in New Gudauri.\nEquipment: Rental equipment is not included in the price of lessons. We can recommend a good rental shop based on your location; prices are about $20 USD/person/day.\nSki lift pass: Ski passes must be purchased directly from the resort and cannot be purchased in advance.\nExtras: Apres ski massages with Vagabond Ski School’s experienced massage therapist can be added to any package for $40 USD per hour. \nInsurance: Vagabond ski school disclaims all liability for injuries which occur during lessons. Our students are not covered by any insurance and are highly recommended to purchase their own travel insurance or ensure that their current health insurance covers skiing and snowboarding abroad. We recommend World Nomads\nTo book: Fill out the booking request form. Payment is on arrival (cash) or 48 hours before lessons (card/PayPal/bank transfer).",
+    "packages": [{
+      "title": "PRIVATE LESSONS",
+      "description": "Book a private instructor for 1-5 people for the most personalized ski experience",
+      "options": ["#title\n\nthis is markdown\n * 123\n * asd\n * qwert", "#title\n\nthis is markdown\n * 123\n * asd\n * qwert"]
+
+    }, {
+      "title": "4 Day Packages",
+      "description": "Book a private instructor for 1-5 people for the most personalized ski experience",
+      "options": ["#title\n\nthis is markdown\n * 123\n * asd\n * qwert", "#title\n\nthis is markdown\n * 123\n * asd\n * qwert"]
+
+    }]
+
+
+  },
   "team_members": [{
     "name": "Taylor",
     "skills": "Native English \u2013 Founder & lead ski instructor\u00a0\n",
