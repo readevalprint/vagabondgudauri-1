@@ -25,51 +25,79 @@
   <!-- Services -->
   <section class="page-section" id="services">
     <div class="container">
-      
+
       <div class="row text-center">
         {% for service in services %}
-        <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">{{ service.title }}</h4>
-          <p class="text-muted">{{ service.description }}</p>
-        </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+              <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">{{ service.title }}</h4>
+            <p class="text-muted">{{ service.description }}</p>
+          </div>
         {% endfor %}
       </div>
     </div>
   </section>
 
   <!-- Portfolio Grid -->
-  <section class="bg-light page-section" id="lessions">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">{{ lessons.head }}</h2>
-          <h3 class="section-subheading text-muted">{{ lessons.subheading }}</h3>
-          <p>{{ lessons.description }}</p>
-        </div>
-      </div>
-      <div class="row">
-        {% for lesson in lessons.items %}
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="{% static lesson.pic %}" alt="{{ lesson.title }}">
-          </a>
-          <div class="portfolio-caption">
-            <h4>{{ lesson.title }}</h4>
-            <p class="text-muted">{{ lesson.description }}</p>
+  <section class="bg-light page-section" id="lessons">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">{{ package.title  }}</h2>
+            <h3 class="section-subheading text-muted">{{ package.description }}</h3>
           </div>
         </div>
-        {% endfor %}
+        <div class="row">
+    {% for package in lessons.packages %}
+            <div class="col-md-4 col-sm-6 portfolio-item">
+              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal{{ forloop.counter }}">
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content">
+                    <i class="fas fa-plus fa-3x"></i>
+                  </div>
+                </div>
+                <img class="img-fluid" src="{% static lesson.pic %}" alt="{{ lesson.title }}">
+              </a>
+              <div class="portfolio-caption">
+                <h4>{{ lesson.title }}</h4>
+                <p class="text-muted">{{ lesson.subheading }}</p>
+              </div>
+            </div>
+
+            <!-- modal -->
+            <div class="portfolio-modal modal fade" id="portfolioModal{{ forloop.counter }}" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                      <div class="rl"></div>
+                    </div>
+                  </div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-8 mx-auto">
+                        <div class="modal-body">
+                          <!-- Project Details Go Here -->
+                          <h2 class="text-uppercase">{{ lesson.title }}</h2>
+                          <p class="item-intro text-muted">{{ lesson.description }}</p>
+                          <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
+                          <p>{{ lesson.description }}</p>
+                          <button class="btn btn-primary" data-dismiss="modal" type="button">
+                            <i class="fas fa-times"></i>
+                            Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
       </div>
-    </div>
   </section>
 
   <!-- About -->
@@ -164,14 +192,14 @@
       </div>
       <div class="row">
         {% for t in team_members %}
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="{% static t.pic %}" alt="">
-            <h4>{{ t.name }}</h4>
-            <p class="text-muted">{{ t.skills }}</p>
-            <p class="">{{ t.bio }}</p>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="{% static t.pic %}" alt="">
+              <h4>{{ t.name }}</h4>
+              <p class="text-muted">{{ t.skills }}</p>
+              <p class="">{{ t.bio }}</p>
+            </div>
           </div>
-        </div>
         {% endfor %}
       </div>
       <div class="row">
@@ -295,42 +323,10 @@
     </div>
   </footer>
 
-  <!-- Modal 1 -->
-  {% for lesson in lessons.items %}
-    <div class="portfolio-modal modal fade" id="portfolioModal{{ forloop.counter }}" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <div class="lr">
-            <div class="rl"></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Project Name</h2>
-                <p class="item-intro text-muted">{{ lesson.title }}</p>
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                <ul class="list-inline">
-                  <li>Date: January 2017</li>
-                  <li>Client: Threads</li>
-                  <li>Category: Illustration</li>
-                </ul>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times"></i>
-                  Close Project</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Portfolio Modals -->
 
-  
 
-  
+
+
+
 {% endblock %}

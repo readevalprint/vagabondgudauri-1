@@ -25,18 +25,18 @@
   "lessons": {
 
     "head": "Ski Lessons & Prices",
-    "subhead": "Education and experiences are the best investments in life satisfaction",
+    "subheading": "Education and experiences are the best investments in life satisfaction",
     "description": "Let’s make the most out of your ski or snowboard trip to Gudauri by taking your technique to the next level! Our range of private lesson and discounted package options can be booked individually or together with friends and family. Each lesson is individually tailored to the student(s); we ski at a pace suitable for you and take breaks when you want them. \n\nLocation: Our instructors will meet you wherever is most convenient within the area of Gudauri Ski Resort based on your ability level and the location of your accommodation. Group lessons meet in New Gudauri.\nEquipment: Rental equipment is not included in the price of lessons. We can recommend a good rental shop based on your location; prices are about $20 USD/person/day.\nSki lift pass: Ski passes must be purchased directly from the resort and cannot be purchased in advance.\nExtras: Apres ski massages with Vagabond Ski School’s experienced massage therapist can be added to any package for $40 USD per hour. \nInsurance: Vagabond ski school disclaims all liability for injuries which occur during lessons. Our students are not covered by any insurance and are highly recommended to purchase their own travel insurance or ensure that their current health insurance covers skiing and snowboarding abroad. We recommend World Nomads\nTo book: Fill out the booking request form. Payment is on arrival (cash) or 48 hours before lessons (card/PayPal/bank transfer).",
     "packages": [{
-      "title": "PRIVATE LESSONS",
-      "description": "Book a private instructor for 1-5 people for the most personalized ski experience",
-      "options": ["#title\n\nthis is markdown\n * 123\n * asd\n * qwert", "#title\n\nthis is markdown\n * 123\n * asd\n * qwert"]
-
+      "title": "PRIVATE HALF DAY",
+      "subheading": "For absolutely everybody. Half days are our most popular option.",
+      "description": "Enough time for significant progress, not too much to wear you out. Half day lessons (especially in our 4-day courses!) give you the opportunity to combine learning with an instructor and practicing on your own. A half day is enough time to thoroughly work on the aspects of your technique which most need improvement, and you’ll have the other half of the day to practice at your own pace and be in tiptop shape for the next lesson. We recommend a 4 × half day course as a minimum for first-time skiers and snowboarders to become confident and able to safely explore the slopes on their own, and a 4 × full day course is best for skiers who want to successfully make parallel turns and snowboarders to link their turns down intermediate slopes.  ",
+      "pic": "theme/img/package.jpg"
     }, {
-      "title": "4 Day Packages",
-      "description": "Book a private instructor for 1-5 people for the most personalized ski experience",
-      "options": ["#title\n\nthis is markdown\n * 123\n * asd\n * qwert", "#title\n\nthis is markdown\n * 123\n * asd\n * qwert"]
-
+      "title": "PRIVATE FULL DAY",
+      "subheading": "For those who want to improve as quickly as possible.",
+      "description": "The ultimate path to skiing like a pro! A full day ski/snowboard lesson in Gudauri is unquestionably the best way to get the most out of your time and money. A lot of progress can be made in a full day of skiing with an instructor! The fastest learners are often skiing intermediate slopes by the end of their first full day lesson, and it’s not uncommon to go from zero to racing down advanced slopes by the end of a 4 × full day course. If you are motivated to enjoy skiing to its fullest as quickly as possible, this course is for you.",
+      "pic": "theme/img/package.jpg"
     }]
 
 
