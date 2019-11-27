@@ -5,21 +5,27 @@
   },
   "services": [{
     "title": "NATIVE AND FLUENT ENGLISH SPEAKERS",
+    "icon": "comments",
     "description": "We are the only ski school that specializes in English ski lessons in Gudauri. Our instructors are all native or fluent speakers who can clearly articulate exactly how to improve your technique."
   }, {
     "title": "EXPERIENCE WITH KIDS AND ADULTS",
+    "icon": "child",
     "description": "We teach all ages from 4 and up. Our oldest student so far was 72, but we hope to beat that record this year!"
   }, {
     "title": "ENCOURAGING AND EXCITING",
+    "icon":"grin-stars",
     "description": "We not only teach you how to ski, but we\u2019ll make sure you enjoy it so much that you come back for more!"
   }, {
     "title": "CUSTOMIZABLE SKI COURSES",
+    "icon": "tasks",
     "description": "We work with you to create the best ski experience possible, with options ranging from half day discovery lessons to intensive 5-day courses"
   }, {
     "title": "SIMPLE BOOKING PROCESS",
+    "icon": "skiing",
     "description": "Write us an email and receive a quick response in English! We\u2019ll make the process nice and easy so you can focus your time on planning the rest of your trip to Georgia."
   }, {
     "title": "KNOWLEDGE ABOUT GUDAURI",
+    "icon": "info",
     "description": "There\u2019s still not too much information online about Gudauri in English, so we\u2019re happy to give our best recommendations to make your experience as enjoyable as possible."
   }],
   "lessons": {
