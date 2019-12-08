@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <style>
+    body { 
+      margin-top: 4em;
+    }
+  </style>
+{% endblock %}
+
+
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+
+        <h1>Sorry there was an error:</h1>
+        <p>{{ msg }}</p>
+
+  {% if exc.lineno %}
+    {{ exc.lineno }}, {{ exc.col }}
+  {% endif %}
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

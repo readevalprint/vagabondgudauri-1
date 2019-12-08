@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block nav_items %}
+  <li class="nav-item">
+  <button class="btn btn-primary" id="save">save</button>
+  </li>
+{% endblock %}
+
+{% block head %}
+  <script src="/admin/static/js/jsoneditor.js"></script>
+
+  <style>
+    body { 
+      margin-top: 10em;
+    }
+    #mainNav{
+      background-color: #212529;
+    }
+    #editor a { 
+      color: #007bff;
+    }
+    #editor  .nav-link.active { 
+      color: #fff;
+    }
+    .card-body {
+      background-color: white !important;
+      padding: 0 0 0 1em;
+      border-radius: 0;
+      border: none;
+      border-left: 1px solid rgba(0,0,0,.125);
+    }
+    div[data-theme="bootstrap4"] div[data-schemaid="root"]::after {
+      content: "" !important;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div id="editor"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ SCHEMA|json_script:"schema" }}
+{{ context|json_script:"context" }}
+
+<script>
+  var schema = JSON.parse(document.getElementById('schema').textContent);
+  var context = JSON.parse(document.getElementById('context').textContent);
+
+  var element = document.getElementById('editor');
+  var editor = new JSONEditor(element, {"schema": schema, 
+    theme: 'bootstrap4',
+    startval:  context,
+    //disable_edit_json: true,
+    disable_array_delete_last_row: true,
+    disable_array_delete_all_rows: true,
+    disable_properties: true,
+    no_additional_properties: true,
+    object_layout: "table",
+    //disable_collapse: true,
+    expand_height: true
+  });
+  editor.on('ready',function() {
+  // Now the api methods will be available
+  editor.validate();
+});
+
+  document.getElementById('save').addEventListener('click',function() {
+    // Get the value from the editor
+    console.log(editor.getValue());
+    var data = editor.getValue();
+    $.ajax({
+      type: "POST",
+      url: "/admin",
+      data: JSON.stringify(data),
+      contentType: "application/json; charset=utf-8",
+      success: function(data) {
+        window.location.reload(true);
+
+      }
+    })
+  })
+
+</script>
+
+{% endblock %}
+
